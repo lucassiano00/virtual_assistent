@@ -31,13 +31,6 @@ for i, inp in enumerate(inputs):
         input_data[i, k, int(ch)] = 1.0
 
 
-# Input data sparse
-'''
-input_data = np.zeros((len(inputs), max_seq), dtype='int32')
-for i, input in enumerate(inputs):
-    for k, ch in enumerate(input):
-        input_data[i, k] = chr2idx[ch]
-'''
 
 # Output Data
 

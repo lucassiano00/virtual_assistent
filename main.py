@@ -15,6 +15,21 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
+def temp():
+
+ while True:
+    data = stream.read(2048)
+    if len(data) == 0:
+        break
+    if rec.AcceptWaveform(data):
+        result = rec.Result()
+        result = json.loads(result)
+
+        if result is not None:
+            text = result['text']
+            speak(core.SystemInfo.get_weather(text))
+            break
+
 
 def evaluate(text):
     #Reconhecer entidade do texto. 
@@ -32,6 +47,16 @@ def evaluate(text):
         elif entity == 'open|chrome':
             speak('Abrindo o google chrome')
             os.system('"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"')
+
+        # Previsão do tempo
+        elif entity == 'weather|getWeather':
+            speak('Qual cidade?')
+            temp()
+            
+
+            
+            
+
 
     print('Text: {}  Entity: {}'.format(text, entity))
 
