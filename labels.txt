@@ -1,4 +1,5 @@
-time\getTime
-time\getDate
-weather\getWeather
-open\None
+open|notepad
+weather|getWeather
+open|chrome
+time|getDate
+time|getTime
