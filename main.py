@@ -5,6 +5,8 @@ import pyttsx3
 import json
 import core
 from nlu.classfier import classify
+import sys
+
 # Síntese de fala
 engine = pyttsx3.init()
 
@@ -52,11 +54,13 @@ def evaluate(text):
         elif entity == 'weather|getWeather':
             speak('Qual cidade?')
             temp()
-            
+        # Saudações    
+        elif entity == 'hello|getHello':
+            speak('Olá, tudo bem?')
 
-            
-            
-
+        elif entity == 'farewells|getFarewells':
+            speak('Até logo')
+            sys.exit()
 
     print('Text: {}  Entity: {}'.format(text, entity))
 

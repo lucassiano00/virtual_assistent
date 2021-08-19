@@ -1,5 +1,5 @@
 commands:
-  # Hora
+  # hour
   - commmand:
     input:  Que horas são?
     entity: time
@@ -12,7 +12,7 @@ commands:
     input:  Eu quero saber as horas.
     entity: time
     action: getTime
-  # Data
+  # Date
   - commmand:
     input:  Qual é a data de hoje?
     entity: time
@@ -21,7 +21,7 @@ commands:
     input:  Data de hoje.
     entity: time
     action: getDate
-  # Tempo
+  # Weather
   - commmand:
     input:  Previsão do tempo
     entity: weather
@@ -47,3 +47,25 @@ commands:
     input:  Abra o google
     entity: open
     action: chrome
+# greetings
+  - commmand:
+    input:  Bom dia 
+    entity: hello
+    action: getHello
+  - commmand:
+    input:  Boa tarde
+    entity: hello
+    action: getHello
+# farewells   
+  - commmand:
+    input:  Adeus
+    entity: farewells
+    action: getFarewells
+  - commmand:
+    input:  Tchau 
+    entity: farewells
+    action: getFarewells
+  - commmand:
+    input:  Até logo
+    entity: farewells
+    action: getFarewells

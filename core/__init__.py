@@ -55,5 +55,6 @@ class SystemInfo:
 
         else:
 
-            return " erro"
+            return " Não consegui encontrar essa cidade"
             
+

@@ -1,5 +1,7 @@
 time|getDate
-open|chrome
 open|notepad
+open|chrome
 weather|getWeather
+farewells|getFarewells
 time|getTime
+hello|getHello
